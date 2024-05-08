@@ -11,3 +11,24 @@ val bytes = 0b1101_0010
 val num09 = 3.14E+16
 val num10 = 3.14E+8F
 
+val a: Int = 30
+val b: String = "Hello"
+
+val aNull : Int? = null
+val bNull : String? = null
+
+fun main(){
+    val str: String? = "Hello Kotlin"
+
+    str?.length
+
+    str!!.length
+
+    str?.length ?: -1
+
+    val a: Int = 1
+    val b: Double = a.toDouble()
+//    val c: Int = 1.1
+
+    val result = 1L + 3 // Long + Int -> result는 Long형이 된다
+}
