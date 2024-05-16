@@ -32,3 +32,24 @@ fun main(){
 
     val result = 1L + 3 // Long + Int -> result는 Long형이 된다
 }
+
+fun sum(a: Int, b: Int): Int{
+    return a + b
+}
+
+fun sumShort(a: Int, b: Int): Int = a+b
+
+fun sumShortAndReturnShort(a: Int, b: Int): Int = a+b
+
+fun printSum(a: Int, b: Int): Unit {
+    println("sum of $a and $b is ${a+b}")
+    return Unit
+}
+
+fun printSumNoReturnState(a: Int, b: Int): Unit {
+    println("sum of $a and $b is ${a+b}")
+}
+
+fun printSumShort(a: Int, b: Int) {
+    println("sum of $a and $b is ${a+b}")
+}
