@@ -1,4 +1,4 @@
-package ch03.section1
+package chap03.section1
 
 fun main() {
     val name = "홍길동"

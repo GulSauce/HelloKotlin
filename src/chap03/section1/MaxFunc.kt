@@ -1,4 +1,4 @@
-package ch03.section1
+package chap03.section1
 
 fun main() {    // 최초의 스택프레임
     val num1 = 10   // 임시 변수 혹은 지역 변수
