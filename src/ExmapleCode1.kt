@@ -99,3 +99,13 @@ val greet  = { println("Hello Word!") }
 val square: (Int)->Int = {x -> x * x}
 
 val nestedLambda: ()->()->Unit = {{ println("nested") }}
+
+val globarVar: Int = 10
+fun varScope(){
+    {
+        val L1: Int = 1
+        {
+            val L2: Int = 2
+        }
+    }
+}
