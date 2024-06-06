@@ -1,4 +1,4 @@
-package chap05.section04
+package chap05.section4
 
 class Person(firstName: String,
             out: Unit = println("[Primary Constructor] Parameter")) { // (2) 주 생성자

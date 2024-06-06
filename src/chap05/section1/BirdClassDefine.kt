@@ -1,4 +1,4 @@
-package chap05.section01
+package chap05.section1
 
 class Bird {
 

@@ -1,12 +1,10 @@
-package chap05.section03.openClass
-
-import org.intellij.lang.annotations.Language
+package chap05.section3.override
 
 open class Bird(var name: String, var wing: Int, var beak: String, var color: String) {
 
     // 메서드들
-    fun fly() = println()
-    fun sing() = println()
+    fun fly() = println("Fly wing: $wing")
+    open fun sing(vol: Int) = println("Sing vol: $vol")
 }
 
 // 주 생성자를 사용하는 상속
@@ -14,19 +12,15 @@ class Lark(name: String, wing: Int, beak: String, color: String) : Bird(name, wi
     fun singHighTone() = println("Happy Song!")
 }
 // 부 생성자를 사용하는 상속
-class Parrot : Bird {
+class Parrot(name: String, wing: Int, beak: String, color: String,
+    var language: String) : Bird (name, wing, beak, color){
 
-    val language: String
-
-    constructor(name: String,
-                wing: Int,
-                beak: String,
-                color: String,
-                language: String) : super(name, wing, beak, color) {
-        this.language = language
+    fun speak() = println("Speak! $language")
+    final override fun sing(vol: Int) {
+        super.sing(vol)
+        println("I'm a parrot $vol")
+        speak()
     }
-
-    fun speak() = println("Speark! $language")
 }
 
 fun main() {
@@ -40,6 +34,8 @@ fun main() {
     println("Coco: ${parrot.name}, ${parrot.wing}, ${parrot.beak}, ${parrot.color}, ${parrot.language}")
     lark.singHighTone()
     parrot.speak()
+    parrot.sing(3)
+    lark.sing(3)
     lark.fly()
 }
 

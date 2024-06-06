@@ -1,4 +1,4 @@
-package chap05.section02.bird2
+package chap05.section2.bird2
 
 // 주 생성자 선언
 class Bird(var name: String, val wing:Int  = 2, var beak: String, var color: String) {

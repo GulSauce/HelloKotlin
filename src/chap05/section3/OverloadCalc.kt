@@ -1,4 +1,4 @@
-package chap05.section03
+package chap05.section3
 
 fun main() {
     val calc = Calc()

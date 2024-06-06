@@ -1,4 +1,4 @@
-package chap05.section04
+package chap05.section4
 
 open class Base {
     open val x: Int = 1
